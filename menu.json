@@ -1,0 +1,18 @@
+{
+    "8626": {
+        "food_id": "8626",
+        "name": "Donut",
+        "quantity": "2",
+        "price": 69.0,
+        "discount": 2.0,
+        "stock": 98
+    },
+    "5162": {
+        "food_id": "5162",
+        "name": "Cake",
+        "quantity": "2",
+        "price": 99.0,
+        "discount": 2.0,
+        "stock": 98
+    }
+}
