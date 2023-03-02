@@ -216,7 +216,7 @@ def place_order(user_id):
     
     print('Here is our menu:')
     for item in menu.values():
-        print(f"{item['food_id']} - {item['name']}, {item['price']}$")
+        print(f"{item['food_id']} - {item['name']}, {item['price']}₹")
     print()
     
     order_id = generate_order_id()
