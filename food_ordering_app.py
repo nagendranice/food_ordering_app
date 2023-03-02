@@ -91,7 +91,7 @@ def view_menu():
     print('Menu:')
     for food in menu.values():
 #         print(menu)
-        print(f"{food['food_id']} - {food['name']}: {food['price']} Tk.")
+        print(f"{food['food_id']} - {food['name']}: {food['price']} ₹")
 
 def remove_food_item():
     with open('menu.json', 'r') as file:
@@ -203,7 +203,7 @@ def view_menu():
     
     print('Here is our menu:')
     for item in menu.values():
-        print(f"{item['food_id']} - {item['name']}, {item['price']}$")
+        print(f"{item['food_id']} - {item['name']}, {item['price']}₹")
     print()
     
 def place_order(user_id):
@@ -259,12 +259,12 @@ def place_order(user_id):
         # Update the stock of the food item
         menu[food_id]['stock'] -= quantity
         
-        print(f"{quantity} {item['name']} added to your order. Subtotal: {item['subtotal']}$\n")
+        print(f"{quantity} {item['name']} added to your order. Subtotal: {item['subtotal']}₹\n")
     
     print('Here is your order:')
     for item in order:
         print(f"{item['quantity']} x {item['name']} = {item['subtotal']}$")
-    print(f"Total price: {total_amount}$\n")
+    print(f"Total price: {total_amount}₹\n")
     
     # Save the order details to the orders.json file
     order_data = {
@@ -315,7 +315,8 @@ def register():
     if len(users) == 0:
         user_id = 1
     else:
-        user_id = users[-1]['user_id'] + 1
+        last_user_id = max([int(key) for key in users.keys()])
+        user_id = last_user_id + 1
 
     # Get user details
     full_name = input('Enter your full name: ')
